@@ -25,11 +25,11 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import useSupabaseBrowser from "@/lib/supabase/client";
+// import useSupabaseBrowser from "@/lib/supabase/client";
 import { ReportTitle, ReportType } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type Props = {
     reportTypes: ReportType[];
@@ -43,14 +43,14 @@ export default function ReportAddCard({ reportTypes, reportTitles }: Props) {
     const [reportTypeSelected, setReportTypeSelected] = useState("");
     const [reportTitleSelected, setReportTitleSelected] = useState("");
 
-    const supabase = useSupabaseBrowser();
+    // const supabase = useSupabaseBrowser();
 
-    async function handleSubmit(event) {
-        const { data } = await supabase.from("reports").insert({
-            deadline,
-            description,
-            repor 
-        });
+    async function handleSubmit() {
+        // const { data } = await supabase.from("reports").insert({
+        //     deadline,
+        //     description,
+        //     report_title_id: 0
+        // });
     }
 
     return (
